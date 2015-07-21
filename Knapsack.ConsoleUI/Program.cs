@@ -44,7 +44,7 @@ namespace Knapsack.ConsoleUI
 
         static void Main(string[] args)
         {
-            var ff = new KnapsackFunction(
+            var ff = new FitnessFunction(
                 Stream.__Methods.generate(new ItemSupplier()).limit(NITEMS).toArray().Cast<Item>().ToArray(), KSSIZE);
 
             // Configure and build the evolution engine.

@@ -12,12 +12,12 @@ namespace Knapsack.ConsoleUI
     /// The knapsack fitness function class, which is parametrized with
     /// the available items and the size of the knapsack.
     /// </summary>
-    public sealed class KnapsackFunction : Function
+    public sealed class FitnessFunction : Function
     {
         private Item[] Items { get; set; }
         private java.lang.Double Size { get; set; }
 
-        public KnapsackFunction(Item[] items, double size)
+        public FitnessFunction(Item[] items, double size)
         {
             this.Items = items;
             this.Size = java.lang.Double.valueOf(size);

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealFunction.ConsoleUI", "R
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knapsack.ConsoleUI", "Knapsack.ConsoleUI\Knapsack.ConsoleUI.csproj", "{6420AED0-AAC8-4D35-96D8-26A6340544D0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelingSalesman.ConsoleUI", "TravelingSalesman.ConsoleUI\TravelingSalesman.ConsoleUI.csproj", "{BFF6F3A8-7CD2-419B-8417-AC79C758897A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6420AED0-AAC8-4D35-96D8-26A6340544D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6420AED0-AAC8-4D35-96D8-26A6340544D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6420AED0-AAC8-4D35-96D8-26A6340544D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFF6F3A8-7CD2-419B-8417-AC79C758897A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFF6F3A8-7CD2-419B-8417-AC79C758897A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFF6F3A8-7CD2-419B-8417-AC79C758897A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFF6F3A8-7CD2-419B-8417-AC79C758897A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
