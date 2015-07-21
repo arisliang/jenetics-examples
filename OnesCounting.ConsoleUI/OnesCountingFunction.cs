@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OnesCounting.ConsoleUI
 {
-    public class CountFunction : Function
+    public class OnesCountingFunction : Function
     {
         /// <summary>
         /// Calculates the fitness for a given genotype.

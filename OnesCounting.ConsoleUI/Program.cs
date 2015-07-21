@@ -14,7 +14,7 @@ namespace OnesCounting.ConsoleUI
         static void Main(string[] args)
         {
             // Configure and build the evolution engine.
-            var engine = Engine.builder(new CountFunction(), BitChromosome.of(20, 0.15))
+            var engine = Engine.builder(new OnesCountingFunction(), BitChromosome.of(20, 0.15))
                 .populationSize(500)
                 .selector(new RouletteWheelSelector())
                 .alterers(new Mutator(0.55), new SinglePointCrossover(0.06))
