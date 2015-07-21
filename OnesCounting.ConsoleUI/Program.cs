@@ -11,20 +11,10 @@ namespace OnesCounting.ConsoleUI
 {
     class Program
     {
-        /// <summary>
-        /// Calculates the fitness for a given genotype.
-        /// </summary>
-        /// <param name="gt">Genotype of BitGene type in Java example</param>
-        /// <returns></returns>
-        internal static Integer count(Genotype gt)
-        {
-            return new Integer(((BitChromosome)(gt.getChromosome())).bitCount());
-        }
-
         static void Main(string[] args)
         {
             // Configure and build the evolution engine.
-            var engine = Engine.builder(new CountLamda(), BitChromosome.of(20, 0.15))
+            var engine = Engine.builder(new CountFunction(), BitChromosome.of(20, 0.15))
                 .populationSize(500)
                 .selector(new RouletteWheelSelector())
                 .alterers(new Mutator(0.55), new SinglePointCrossover(0.06))
@@ -49,30 +39,4 @@ namespace OnesCounting.ConsoleUI
             Console.WriteLine(best);
         }
     }
-
-    public class CountLamda : java.util.function.Function
-    {
-        public java.util.function.Function andThen(java.util.function.Function after)
-        {
-            throw new NotImplementedException();
-        }
-
-        public object apply(object t)
-        {
-            Genotype gt = (Genotype)t;
-            Integer c = Program.count(gt);
-            return c;
-        }
-
-        public java.util.function.Function compose(java.util.function.Function before)
-        {
-            throw new NotImplementedException();
-        }
-
-        public java.util.function.Function identity()
-        {
-            throw new NotImplementedException();
-        }
-    }
-
 }
