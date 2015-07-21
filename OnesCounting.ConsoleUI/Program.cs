@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using org.jenetics;
 using org.jenetics.engine;
+using java.lang;
 
 namespace OnesCounting.ConsoleUI
 {
@@ -15,9 +16,9 @@ namespace OnesCounting.ConsoleUI
         /// </summary>
         /// <param name="gt">Genotype of BitGene type in Java example</param>
         /// <returns></returns>
-        internal static int count(Genotype gt)
+        internal static Integer count(Genotype gt)
         {
-            return ((BitChromosome)(gt.getChromosome())).bitCount();
+            return new Integer(((BitChromosome)(gt.getChromosome())).bitCount());
         }
 
         static void Main(string[] args)
@@ -32,13 +33,15 @@ namespace OnesCounting.ConsoleUI
             // Create evoluation statistics consumer
             var statistics = EvolutionStatistics.ofNumber();
 
-            var best = engine.stream()
+            var evolution = engine.stream()
                 // Truncate the evolution stream after 7 "steady" generations
                 .limit(limit.bySteadyFitness(7))
                 // The evolution will stop after maximal 100 generations
                 .limit(100)
                 // Update the evaluation statistics after each generation
-                .peek(statistics)
+                .peek(statistics);
+
+            var best = evolution
                 // Collect (reduce) the evolution stream to its best phenotype.
                 .collect(EvolutionResult.toBestGenotype());
 
@@ -57,7 +60,7 @@ namespace OnesCounting.ConsoleUI
         public object apply(object t)
         {
             Genotype gt = (Genotype)t;
-            int c = Program.count(gt);
+            Integer c = Program.count(gt);
             return c;
         }
 
