@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace RealFunction.ConsoleUI
 {
-    public class RealFunction : Function
+    public sealed class RealFunction : Function
     {
         // This method calculates the fitness for a given genotype.
         private static java.lang.Double eval(Genotype gt)

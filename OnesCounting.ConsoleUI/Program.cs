@@ -28,6 +28,9 @@ namespace OnesCounting.ConsoleUI
 
         private static readonly int STEADYLIMIT = 7;
 
+        /// <summary>
+        /// Generation limit.
+        /// </summary>
         private static readonly int LIMIT = 100;
 
         static void Main(string[] args)
