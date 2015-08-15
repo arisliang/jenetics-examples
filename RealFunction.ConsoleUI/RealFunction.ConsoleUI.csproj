@@ -144,8 +144,8 @@
       <HintPath>..\packages\IKVM.8.0.5449.1\lib\IKVM.Runtime.JNI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="org.jenetics-3.1.0, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Jenetics.3.1.0\lib\org.jenetics-3.1.0.dll</HintPath>
+    <Reference Include="org.jenetics-3.2.0, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Jenetics.3.2.0\lib\org.jenetics-3.2.0.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
